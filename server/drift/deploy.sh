@@ -9,6 +9,6 @@ SSH=(ssh -i "$NYCKEL" -o BatchMode=yes "$VPS")
 rsync -az --delete --exclude node_modules --exclude svar --exclude drift -e "ssh -i $NYCKEL" \
   index.html fragor.js server "$VPS:/opt/soprovdel02/app/"
 "${SSH[@]}" 'cd /opt/soprovdel02/app/server && PATH=/opt/sistaprov/node/bin:$PATH npm ci --omit=dev --silent \
-  && chown -R root:soprovdel02 /opt/soprovdel01/app && chmod -R g+rX,o-rwx /opt/soprovdel01/app \
-  && systemctl restart soprovdel02 && sleep 1 && systemctl is-active soprovdel01 && curl -fs 127.0.0.1:8793/status'
+  && chown -R root:soprovdel02 /opt/soprovdel02/app && chmod -R g+rX,o-rwx /opt/soprovdel02/app \
+  && systemctl restart soprovdel02 && sleep 1 && systemctl is-active soprovdel02 && curl -fs 127.0.0.1:8793/status'
 echo

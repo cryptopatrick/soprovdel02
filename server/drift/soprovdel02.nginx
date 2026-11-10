@@ -1,4 +1,4 @@
-# /etc/nginx/sites-available/soprovdel02 – soprovdel01: provsidan och rättningen via Node på 127.0.0.1:8793.
+# /etc/nginx/sites-available/soprovdel02 – SO-prov del 2: provsidan och rättningen via Node på 127.0.0.1:8793.
 # certbot --nginx -d soprov2.49-12-204-84.sslip.io lägger till HTTPS-delen.
 server {
     listen 80;

@@ -1,4 +1,4 @@
-# /etc/systemd/system/soprovdel02.service – rättningsservern för soprovdel01 (soprov2.49-12-204-84.sslip.io)
+# /etc/systemd/system/soprovdel02.service – rättningsservern för SO-prov del 2 (soprov2.49-12-204-84.sslip.io)
 [Unit]
 Description=SO-prov WW2 del 2 rättningsserver (Claude)
 After=network-online.target
